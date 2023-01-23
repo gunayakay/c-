@@ -1,0 +1,15 @@
+/Users/gunayakay/Desktop/MyFirstName/MyFirstName/bin/Debug/net7.0/MyFirstName
+/Users/gunayakay/Desktop/MyFirstName/MyFirstName/bin/Debug/net7.0/MyFirstName.deps.json
+/Users/gunayakay/Desktop/MyFirstName/MyFirstName/bin/Debug/net7.0/MyFirstName.runtimeconfig.json
+/Users/gunayakay/Desktop/MyFirstName/MyFirstName/bin/Debug/net7.0/MyFirstName.dll
+/Users/gunayakay/Desktop/MyFirstName/MyFirstName/bin/Debug/net7.0/MyFirstName.pdb
+/Users/gunayakay/Desktop/MyFirstName/MyFirstName/obj/Debug/net7.0/MyFirstName.csproj.AssemblyReference.cache
+/Users/gunayakay/Desktop/MyFirstName/MyFirstName/obj/Debug/net7.0/MyFirstName.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gunayakay/Desktop/MyFirstName/MyFirstName/obj/Debug/net7.0/MyFirstName.AssemblyInfoInputs.cache
+/Users/gunayakay/Desktop/MyFirstName/MyFirstName/obj/Debug/net7.0/MyFirstName.AssemblyInfo.cs
+/Users/gunayakay/Desktop/MyFirstName/MyFirstName/obj/Debug/net7.0/MyFirstName.csproj.CoreCompileInputs.cache
+/Users/gunayakay/Desktop/MyFirstName/MyFirstName/obj/Debug/net7.0/MyFirstName.dll
+/Users/gunayakay/Desktop/MyFirstName/MyFirstName/obj/Debug/net7.0/refint/MyFirstName.dll
+/Users/gunayakay/Desktop/MyFirstName/MyFirstName/obj/Debug/net7.0/MyFirstName.pdb
+/Users/gunayakay/Desktop/MyFirstName/MyFirstName/obj/Debug/net7.0/MyFirstName.genruntimeconfig.cache
+/Users/gunayakay/Desktop/MyFirstName/MyFirstName/obj/Debug/net7.0/ref/MyFirstName.dll

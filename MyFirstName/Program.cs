@@ -1,4 +1,16 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-Console.WriteLine("Hello, World!");
+﻿using System;
 
+
+namespace MyFirstProject
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("I like pizza!");
+            Console.WriteLine("It's really good!");
+            Console.Beep();
+        }
+
+    }
+}
