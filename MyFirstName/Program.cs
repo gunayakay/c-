@@ -7,9 +7,21 @@ namespace MyFirstProject
     {
         static void Main(string[] args)
         {
+            Console.Write("I like pizza!");
             Console.WriteLine("I like pizza!");
-            Console.WriteLine("It's really good!");
-            Console.Beep();
+
+            // This is a comment
+
+            /*This is
+             * a 
+             * multiline 
+             * comment
+             */
+            // \t is tab space 
+            // \b is delete one word before
+            // \n is to second line
+            Console.WriteLine("Gunay\nAkay");
+            Console.ReadKey();
         }
 
     }
