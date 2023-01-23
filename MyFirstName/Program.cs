@@ -7,33 +7,15 @@ namespace MyFirstProject
     {
         static void Main(string[] args)
         {
-            int x ; // decleration
-            x = 123; // initialization
+            // constant = immutable values which are known at compile time  
+            //            and do not change for the life of the program
 
-            int y = 321; // decleration + initialization
+            const double pi = 3.14159;
 
-            int z = x + y;
+           //  pi = 420; we cannot do this when our pi is constant
 
-            int age = 21; // whole integer
-            double height = 300.5; // with decimal points 
-            bool alive = true; // it returns true or false 
-            char symbol = '@'; // it returns characters like symbols
-            string name = "Gunay"; // it returns string value 
-
-
-            string userName = symbol + name;
-
-            Console.WriteLine(x);
-            Console.WriteLine(y);
-            Console.WriteLine(z);
-            Console.WriteLine("Your age is: " + age +"."); // You can use it with plus
-            Console.WriteLine($"Your age is: {age}."); // or with dollar symbol
-            Console.WriteLine($"The building height is: {height} cm.");
-            Console.WriteLine($"Are You alive? {alive}");
-            Console.WriteLine($"Your symbol is: {symbol}");
-            Console.WriteLine($"Your name is: {name}");
-            Console.WriteLine($"Your username is: {userName}");
-            
+            Console.WriteLine(pi);
+            Console.ReadKey();
         }
 
     }
