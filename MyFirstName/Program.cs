@@ -7,21 +7,33 @@ namespace MyFirstProject
     {
         static void Main(string[] args)
         {
-            Console.Write("I like pizza!");
-            Console.WriteLine("I like pizza!");
+            int x ; // decleration
+            x = 123; // initialization
 
-            // This is a comment
+            int y = 321; // decleration + initialization
 
-            /*This is
-             * a 
-             * multiline 
-             * comment
-             */
-            // \t is tab space 
-            // \b is delete one word before
-            // \n is to second line
-            Console.WriteLine("Gunay\nAkay");
-            Console.ReadKey();
+            int z = x + y;
+
+            int age = 21; // whole integer
+            double height = 300.5; // with decimal points 
+            bool alive = true; // it returns true or false 
+            char symbol = '@'; // it returns characters like symbols
+            string name = "Gunay"; // it returns string value 
+
+
+            string userName = symbol + name;
+
+            Console.WriteLine(x);
+            Console.WriteLine(y);
+            Console.WriteLine(z);
+            Console.WriteLine("Your age is: " + age +"."); // You can use it with plus
+            Console.WriteLine($"Your age is: {age}."); // or with dollar symbol
+            Console.WriteLine($"The building height is: {height} cm.");
+            Console.WriteLine($"Are You alive? {alive}");
+            Console.WriteLine($"Your symbol is: {symbol}");
+            Console.WriteLine($"Your name is: {name}");
+            Console.WriteLine($"Your username is: {userName}");
+            
         }
 
     }
