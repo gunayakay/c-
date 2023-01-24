@@ -7,21 +7,21 @@ namespace MyFirstProject
     {
         static void Main(string[] args)
         {
-            // while loop = repeats some code while some condition remains true 
+            // for loop = repeats some code a FINITE amounts of times
 
-            Console.WriteLine("Enter your name: ");
-            String name = Console.ReadLine();
-
-            while (name =="")
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine("Enter your name: ");
-                String name = Console.ReadLine();
-
+                Console.WriteLine(i);
             }
 
+            // countdown 
+            for (int i = 10; i > 0; i--)
+            {
+                Console.WriteLine(i);
+            }
+                Console.WriteLine("Happy new year!!");
 
-            Console.WriteLine("Hello " + name );
-
+            
             Console.ReadKey();
         }
 
