@@ -7,24 +7,22 @@ namespace MyFirstProject
     {
         static void Main(string[] args)
         {
+            // if statement = a basic form of decision making
 
-            String fullName = "Gunay Akay";
-            // String phoneNumber = "123-456-7890";
-
-
-            // fullName = fullName.ToLower(); Lowercase
-            // fullName = fullName.ToUpper(); Uppercase 
-            // String userName = fullName.Insert(0,"@"); add item to shown index
+            Console.WriteLine("Please enter your name: ");
+            String name = Console.ReadLine();
 
 
-            // phoneNumber = phoneNumber.Replace("-","/"); replace items 
+            if(name == "")
+            {
+                Console.WriteLine("You did not enter your name!");
+            }
+            else
+            {
+                Console.WriteLine($"Hello {name}");
+            }
 
-            //Console.WriteLine(fullName.Length); // length of fullname how many character it have 
-            //String firstName = fullName.Substring(0, 5);
-            //Console.WriteLine(firstName);
-
-            //String lastName = fullName.Substring(5, 5);
-            Console.WriteLine(fullName);
+            Console.ReadKey();
         }
 
     }
