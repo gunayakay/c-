@@ -7,31 +7,34 @@ namespace MyFirstProject
     {
         static void Main(string[] args)
         {
-            double friends = 10;
+            double x = 3;
+            double y = -3;
+            double z = 3.14159;
+            double t = 3.99;
 
-            // friends = friends + 1;
-            // friends += 1;
-            // friends++;
 
-            // friends = friends - 1;
-            // friends -= 1;
-            // friends--;
 
-            // friends = friends * 2;
-            //friends *= 2;
-            // friends = friends / 2;
-            // friends /= 2;
-
+            double a = Math.Pow(x, 3); // power of x 
+            double b = Math.Sqrt(x); // square of x 
+            double c = Math.Abs(y); // absolue value of y
+            double d = Math.Round(z); // round to down 
+            double e = Math.Ceiling(z); // round to up
+            double f = Math.Floor(t); // round to 
+            double g = Math.Max(x,y); // max value betwenn x-y
+            double h = Math.Min(z,t); // min value betwenn z-t
             
 
-            int reminder = (int)(friends % 3);
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
+            Console.WriteLine(d);
+            Console.WriteLine(e);
+            Console.WriteLine(f);
+            Console.WriteLine(g);
+            Console.WriteLine(h);
 
-
-            Console.WriteLine(friends);
-            Console.WriteLine(reminder);
-
-            
             Console.ReadKey();
+
         }
 
     }
