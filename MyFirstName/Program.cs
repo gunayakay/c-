@@ -7,18 +7,18 @@ namespace MyFirstProject
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
 
-            int num = random.Next(1,6);
-            int num2 = random.Next(1,6);
+            Console.WriteLine("Enter side A: ");
+            double a = Convert.ToDouble(Console.ReadLine());
 
-            //double num = random.NextDouble();
 
-            Console.WriteLine(num);
-            Console.WriteLine(num2);
+            Console.WriteLine("Enter side B: ");
+            double b = Convert.ToDouble(Console.ReadLine());
 
-            Console.ReadKey();
+            double c = Math.Sqrt((a * a) + (b * b));
 
+            Console.WriteLine($"The hypotenuse is: {c}");
+            Console.WriteLine(c);
         }
 
     }
