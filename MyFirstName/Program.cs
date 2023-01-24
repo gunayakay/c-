@@ -7,41 +7,21 @@ namespace MyFirstProject
     {
         static void Main(string[] args)
         {
-            // switch = an efficient alternative to many else if statements 
+            // logic operators = Can be used to check if more than 1 condition is true/false
+            // && - (AND)
+            // || - (OR)
 
+            Console.WriteLine("What is the temperature outside: (C) ");
+            double temp = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("What day is it today");
-            String day = Console.ReadLine();
-
-
-            switch (day)
+            if (temp >= 10 && temp <= 25 )
             {
-                case "Monday":
-                    Console.WriteLine("It's Monday!");
-                    break;
-                case "Tuesday":
-                    Console.WriteLine("It's Tuesday!");
-                    break;
-                case "Wednesday":
-                    Console.WriteLine("It's Wednesday!");
-                    break;
-                case "Thursday":
-                    Console.WriteLine("It's Thursday!");
-                    break;
-                case "Friday":
-                    Console.WriteLine("It's Friday!");
-                    break;
-                case "Saturday":
-                    Console.WriteLine("It's Saturday!");
-                    break;
-                case "Sunday":
-                    Console.WriteLine("It's Sunday!");
-                    break;
-                default:
-                    Console.WriteLine(day + " its not a day!");
-                    break;
-                }
-
+                Console.WriteLine("It's warm outside");
+            }
+            else if (temp <= -50 || temp >= 50)
+            {
+                Console.WriteLine("DO NOT GO OUTSIDE!!");
+            }
             Console.ReadKey();
         }
 
