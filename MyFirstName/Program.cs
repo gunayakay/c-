@@ -7,21 +7,21 @@ namespace MyFirstProject
     {
         static void Main(string[] args)
         {
-            // logic operators = Can be used to check if more than 1 condition is true/false
-            // && - (AND)
-            // || - (OR)
+            // while loop = repeats some code while some condition remains true 
 
-            Console.WriteLine("What is the temperature outside: (C) ");
-            double temp = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter your name: ");
+            String name = Console.ReadLine();
 
-            if (temp >= 10 && temp <= 25 )
+            while (name =="")
             {
-                Console.WriteLine("It's warm outside");
+                Console.WriteLine("Enter your name: ");
+                String name = Console.ReadLine();
+
             }
-            else if (temp <= -50 || temp >= 50)
-            {
-                Console.WriteLine("DO NOT GO OUTSIDE!!");
-            }
+
+
+            Console.WriteLine("Hello " + name );
+
             Console.ReadKey();
         }
 
