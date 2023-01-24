@@ -8,17 +8,23 @@ namespace MyFirstProject
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Enter side A: ");
-            double a = Convert.ToDouble(Console.ReadLine());
+            String fullName = "Gunay Akay";
+            // String phoneNumber = "123-456-7890";
 
 
-            Console.WriteLine("Enter side B: ");
-            double b = Convert.ToDouble(Console.ReadLine());
+            // fullName = fullName.ToLower(); Lowercase
+            // fullName = fullName.ToUpper(); Uppercase 
+            // String userName = fullName.Insert(0,"@"); add item to shown index
 
-            double c = Math.Sqrt((a * a) + (b * b));
 
-            Console.WriteLine($"The hypotenuse is: {c}");
-            Console.WriteLine(c);
+            // phoneNumber = phoneNumber.Replace("-","/"); replace items 
+
+            //Console.WriteLine(fullName.Length); // length of fullname how many character it have 
+            //String firstName = fullName.Substring(0, 5);
+            //Console.WriteLine(firstName);
+
+            //String lastName = fullName.Substring(5, 5);
+            Console.WriteLine(fullName);
         }
 
     }
