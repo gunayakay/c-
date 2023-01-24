@@ -7,14 +7,15 @@ namespace MyFirstProject
     {
         static void Main(string[] args)
         {
-            // constant = immutable values which are known at compile time  
-            //            and do not change for the life of the program
+            Console.WriteLine("What's your name?");
+            String name = Console.ReadLine();
 
-            const double pi = 3.14159;
+            Console.WriteLine("How old are you?");
+            int age = Convert.ToInt32(Console.ReadLine());
 
-           //  pi = 420; we cannot do this when our pi is constant
+            Console.WriteLine($"Hello {name}.Your age is {age}");
 
-            Console.WriteLine(pi);
+            
             Console.ReadKey();
         }
 
