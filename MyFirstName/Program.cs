@@ -25,7 +25,7 @@ namespace MyFirstProject
                 number = random.Next(min, max + 1);
                 while (guess != number)
                 {
-                    Console.WriteLine("Guess a number between" + min + " - " + max + " : " );
+                    Console.WriteLine($"Guess a number between {min} - { max }: ");
                     guess = Convert.ToInt32(Console.ReadLine());
                     Console.WriteLine("Guess: " + guess);
 
