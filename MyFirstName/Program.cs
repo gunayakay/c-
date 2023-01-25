@@ -7,33 +7,59 @@ namespace MyFirstProject
     {
         static void Main(string[] args)
         {
-            // nested loops =  loops inside of other loops 
-            //                 Uses vary. Used a lot in sorting alghorithms
+            Random random = new Random();
+            bool playAgain = true;
+            int min = 1;
+            int max = 100;
+            int number;
+            int guess;
+            int guesses;
+            String response;
 
+            while (playAgain == true)
+            {
+                guess = 0;
+                guesses = 0;
+                response= " ";
 
-
-            Console.Write("How many rows?: ");
-            int rows = Convert.ToInt32(Console.ReadLine());
-            
-            Console.Write("How many columns?: ");
-            int columns = Convert.ToInt32(Console.ReadLine());
-            
-            Console.Write("What symbol?: ");
-            string symbol= Console.ReadLine();
-
-            
-                for (int i = 0; i < rows; i++)
+                number = random.Next(min, max + 1);
+                while (guess != number)
                 {
-                    for (int j = 0; j < columns; j++)
-                    {
-                        Console.Write(symbol);
-                    }
-                Console.WriteLine();
-            }
-            
-            
+                    Console.WriteLine("Guess a number between" + min + " - " + max + " : " );
+                    guess = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Guess: " + guess);
 
-            Console.ReadKey();
+                    if (guess > number)
+                    {
+                        Console.WriteLine($"{guess} is to high! ");
+                    }
+                    else if (guess < number)
+                    {
+                        Console.WriteLine($"{guess} is to low! ");
+                    }
+                    guesses++;
+                }
+                Console.WriteLine("Number: " + number);
+                Console.WriteLine("YOU WIN!!!");
+                Console.WriteLine("Guesses: " + guesses);
+                Console.WriteLine("Would you play again (Y/N): " );
+                response = Console.ReadLine();
+                response = response.ToUpper();
+
+                if (response == "Y")
+                {
+                    playAgain = true;
+                }
+                else
+                {
+                    playAgain = false;
+                }
+
+
+            }
+
+               Console.WriteLine("Thank you for playing.. ");
+               Console.ReadKey();
         }
 
     }
