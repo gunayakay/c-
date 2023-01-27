@@ -1,89 +1,52 @@
 ﻿using System;
 
 
-namespace MyFirstProject
+namespace RockPaperScissors
 {
     class Program
     {
         static void Main(string[] args)
         {
 
-        Random random = new Random();
-        bool playAgain = true;
-            String player;
-            String computer;
+            double num1 = 0;
+            double num2 = 0;
+            double result = 0;
 
-            while (playAgain)
+            Console.Write("Enter num 1: ");
+            num1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter num 2: ");
+            num2 = Convert.ToDouble(Console.ReadLine());
+
+
+            Console.WriteLine("Enter an option: ");
+            Console.WriteLine("\t+ : Add");
+            Console.WriteLine("\t- : Substract");
+            Console.WriteLine("\t* : Multiply ");
+            Console.WriteLine("\t/ : Divide ");
+
+            switch (Console.ReadLine())
             {
-                player = "";
-                computer = "";
+                case "+":
+                    result = num1 + num2;
+                    Console.WriteLine($"The result: {num1} + {num2} = {result}");
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    Console.WriteLine($"The result: {num1} - {num2} = {result}");
+                    break;
+                case "*":
+                    result = num1 + num2;
+                    Console.WriteLine($"The result: {num1} * {num2} = {result}");
+                    break;
+                case "/":
+                    result = num1 + num2;
+                    Console.WriteLine($"The result: {num1} / {num2} = {result}");
+                    break;
+                default:
+                    Console.WriteLine("That was not a valid option");
+                    break;
 
-                while (player != "ROCK" && player != "PAPER" && player != "SCISSORS")  {
-                Console.Write("Enter ROCK, PAPER, or SCISSORS: ");
-                player = Console.ReadLine();
-                player = player.ToUpper();
-                }
-
-                switch (random.Next(1, 4))
-                {
-                    case 1:
-                        computer = "ROCK";
-                        break;
-                    case 2:
-                        computer = "PAPER";
-                         break;
-                    case 3:
-                        computer = "SCISSORS";
-                        break;
-                }
-
-                Console.WriteLine("Player: " +  player);
-                Console.WriteLine("Computer: " + computer);
-
-                switch(player)
-                {
-                    case "ROCK":
-                        if (computer == "ROCK")
-                        {
-                            Console.WriteLine("It's a draw");
-                        }
-                        else if (computer == "PAPER") {
-                            Console.WriteLine("You Lose!");
-                        }
-                        else
-                        {
-                            Console.WriteLine("You win!");
-                        }
-                        break;
-                    case "PAPER":
-                        if (computer == "PAPER")
-                        {
-                            Console.WriteLine("It's a draw");
-                        }
-                        else if (computer == "SCISSORS")
-                        {
-                            Console.WriteLine("You Lose!");
-                        }
-                        else
-                        {
-                            Console.WriteLine("You win!");
-                        }
-                        break;
-                    case "SCISSORS":
-                        if (computer == "SCISSORS")
-                        {
-                            Console.WriteLine("It's a draw");
-                        }
-                        else if (computer == "ROCK")
-                        {
-                            Console.WriteLine("You Lose!");
-                        }
-                        else
-                        {
-                            Console.WriteLine("You win!");
-                        }
-                        break;
-                }
             }
 
 
