@@ -7,23 +7,24 @@ namespace RockPaperScissors
     {
         static void Main(string[] args)
         {
-            // foreach loop = a simpler way to itarate over an array, but it's less flexible
+            // method = performs a section of code, whenever it's called "invoked",
+            //          benefit = Let's us reuse code w/o writing it multiple times
 
-            String[] cars = { "BMW", "Tesla", "Corvette" };
-
-            for (int i = 0; i < cars.Length; i++)
-            {
-                Console.WriteLine(cars[i]);
-            }
+            string name = "Gunay";
+            int age = 26;
 
 
-            foreach (var car in cars)
-            {
-                Console.WriteLine(car);
-            }
-
+            singHappyBirthday(name,age); 
+          
         Console.ReadKey();
         }
-
+        static void singHappyBirthday(String birtdayBoy, int yearsOld)
+        {
+            Console.WriteLine("Happy birtday to you!");
+            Console.WriteLine("Happy birtday to you!");
+            Console.WriteLine("Happy birtday dear " + birtdayBoy + "!");
+            Console.WriteLine("You are " + yearsOld + " years old!");
+            Console.WriteLine();
+        }
     }
 }
