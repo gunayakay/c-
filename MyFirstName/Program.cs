@@ -7,59 +7,90 @@ namespace MyFirstProject
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
-            bool playAgain = true;
-            int min = 1;
-            int max = 100;
-            int number;
-            int guess;
-            int guesses;
-            String response;
 
-            while (playAgain == true)
+        Random random = new Random();
+        bool playAgain = true;
+            String player;
+            String computer;
+
+            while (playAgain)
             {
-                guess = 0;
-                guesses = 0;
-                response= " ";
+                player = "";
+                computer = "";
 
-                number = random.Next(min, max + 1);
-                while (guess != number)
-                {
-                    Console.WriteLine($"Guess a number between {min} - { max }: ");
-                    guess = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine("Guess: " + guess);
-
-                    if (guess > number)
-                    {
-                        Console.WriteLine($"{guess} is to high! ");
-                    }
-                    else if (guess < number)
-                    {
-                        Console.WriteLine($"{guess} is to low! ");
-                    }
-                    guesses++;
-                }
-                Console.WriteLine("Number: " + number);
-                Console.WriteLine("YOU WIN!!!");
-                Console.WriteLine("Guesses: " + guesses);
-                Console.WriteLine("Would you play again (Y/N): " );
-                response = Console.ReadLine();
-                response = response.ToUpper();
-
-                if (response == "Y")
-                {
-                    playAgain = true;
-                }
-                else
-                {
-                    playAgain = false;
+                while (player != "ROCK" && player != "PAPER" && player != "SCISSORS")  {
+                Console.Write("Enter ROCK, PAPER, or SCISSORS: ");
+                player = Console.ReadLine();
+                player = player.ToUpper();
                 }
 
+                switch (random.Next(1, 4))
+                {
+                    case 1:
+                        computer = "ROCK";
+                        break;
+                    case 2:
+                        computer = "PAPER";
+                         break;
+                    case 3:
+                        computer = "SCISSORS";
+                        break;
+                }
 
+                Console.WriteLine("Player: " +  player);
+                Console.WriteLine("Computer: " + computer);
+
+                switch(player)
+                {
+                    case "ROCK":
+                        if (computer == "ROCK")
+                        {
+                            Console.WriteLine("It's a draw");
+                        }
+                        else if (computer == "PAPER") {
+                            Console.WriteLine("You Lose!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("You win!");
+                        }
+                        break;
+                    case "PAPER":
+                        if (computer == "PAPER")
+                        {
+                            Console.WriteLine("It's a draw");
+                        }
+                        else if (computer == "SCISSORS")
+                        {
+                            Console.WriteLine("You Lose!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("You win!");
+                        }
+                        break;
+                    case "SCISSORS":
+                        if (computer == "SCISSORS")
+                        {
+                            Console.WriteLine("It's a draw");
+                        }
+                        else if (computer == "ROCK")
+                        {
+                            Console.WriteLine("You Lose!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("You win!");
+                        }
+                        break;
+                }
             }
 
-               Console.WriteLine("Thank you for playing.. ");
-               Console.ReadKey();
+
+
+        Console.ReadKey();
+
+
         }
 
     }
