@@ -7,28 +7,26 @@ namespace RockPaperScissors
     {
         static void Main(string[] args)
         {
-            // return = returns data back to the place where a method is invoked
+            // method overloading = method share same name, but different parameters 
+            //                      name + parameters = signature 
+            //                      methods must have a uniqe signature
 
-            double x;
-            double y;
-            double result;
+            double total;
 
-            Console.WriteLine("Enter in number 1: ");
-            x = Convert.ToDouble(Console.ReadLine());
+            total = Multiply(2, 3, 4);
 
-            Console.WriteLine("Enter in number 2: ");
-            y = Convert.ToDouble(Console.ReadLine());
-
-            result = Multiply(x, y);
-            Console.WriteLine(result);
+            Console.WriteLine(total);
 
             Console.ReadKey();
-        }
 
-        static double Multiply(double x, double y)
-        {
-            double z = x * y;
-            return z;
         }
+        static double Multiply(double x,double y)
+            {
+                return x * y;
+            }
+        static double Multiply(double x,double y,double z )
+            {
+                return x * y * z;
+            }
     }
 }
