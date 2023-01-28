@@ -5,28 +5,28 @@ namespace RockPaperScissors
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(String[] args )
         {
-            // method overloading = method share same name, but different parameters 
-            //                      name + parameters = signature 
-            //                      methods must have a uniqe signature
 
-            double total;
+        // params keyword = a method parameter that takes a variable number of arguments.
+        //                  the parameter type must be a single - dimensional array
 
-            total = Multiply(2, 3, 4);
-
-            Console.WriteLine(total);
-
-            Console.ReadKey();
-
+        double total = CheckOut(3.99, 5.75,15);
+        Console.WriteLine(total);
+        Console.ReadKey();
         }
-        static double Multiply(double x,double y)
+
+        static double CheckOut(params double[] prices)
+        {
+            double total = 0;
+
+            foreach (double price in prices)
             {
-                return x * y;
+                total += total;
+
             }
-        static double Multiply(double x,double y,double z )
-            {
-                return x * y * z;
-            }
+            return total;
+        }
     }
+
 }
