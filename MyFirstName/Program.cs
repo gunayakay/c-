@@ -39,11 +39,7 @@ namespace RockPaperScissors
             catch (DivideByZeroException e)
             {
                 Console.WriteLine("You cant divide with 0!");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Something went wrong!");
-            }
+            }           
             finally
             {
                 Console.WriteLine("Thank you!");
