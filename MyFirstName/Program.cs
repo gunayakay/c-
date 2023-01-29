@@ -8,27 +8,16 @@ namespace RockPaperScissors
         static void Main(String[] args )
         {
 
-            // conditional operator = used in conditional assignment if a condition is true/false.
+            // string interpolation = allows us to insert variables into a string literal.
+            //                        precede a string literal with $       
+            //                        {} are placeholders.
 
-            // (condition) ? x : y
+            string firstName = "Gunay";
+            string lastName = "Akay";
+            int age = 25;
 
-            double temperature = 20;
-
-            String message;
-
-            //if (temperature >= 15)
-            //{
-            //    message = "It's warm outside!";
-            //}
-            //else
-            //{
-            //    message = "It's cold outside";
-            //}
-            //Console.WriteLine(message);
-
-
-            message = (temperature >= 15) ? "It's warm outside!" : "It's cold outside";
-            Console.WriteLine((temperature >= 15) ? "It's warm outside!" : "It's cold outside");
+            Console.WriteLine("My name is " +  firstName +" "+ lastName + ". I'm " + age + " years old");
+            Console.WriteLine($"My name is {firstName} {lastName}. I'm {age} years old");
             Console.ReadKey();
         }
 
