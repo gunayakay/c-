@@ -8,25 +8,50 @@ namespace RockPaperScissors
         static void Main(String[] args )
         {
 
-        // params keyword = a method parameter that takes a variable number of arguments.
-        //                  the parameter type must be a single - dimensional array
+            // exception = errors that occur during execution.
 
-        double total = CheckOut(3.99, 5.75,15);
-        Console.WriteLine(total);
+            //       try = try some code that is considered "dangerous"
+            //     catch = catches and handles exceptions when they occur 
+            //   finally = always executes regardless if exception is caught or not
+
+
+            double x;
+            double y;
+            double result;
+
+            try
+            {
+
+            Console.WriteLine("Enter number 1: ");
+            x = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Enter number 2: ");
+            y= Convert.ToDouble(Console.ReadLine());
+
+            result = x / y;
+            Console.WriteLine("The result : " + result);
+
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("Enter only numbers!");
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine("You cant divide with 0!");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Something went wrong!");
+            }
+            finally
+            {
+                Console.WriteLine("Thank you!");
+            }
         Console.ReadKey();
         }
 
-        static double CheckOut(params double[] prices)
-        {
-            double total = 0;
 
-            foreach (double price in prices)
-            {
-                total += total;
-
-            }
-            return total;
-        }
     }
 
 }
