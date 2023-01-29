@@ -8,43 +8,28 @@ namespace RockPaperScissors
         static void Main(String[] args )
         {
 
-            // exception = errors that occur during execution.
+            // conditional operator = used in conditional assignment if a condition is true/false.
 
-            //       try = try some code that is considered "dangerous"
-            //     catch = catches and handles exceptions when they occur 
-            //   finally = always executes regardless if exception is caught or not
+            // (condition) ? x : y
+
+            double temperature = 20;
+
+            String message;
+
+            //if (temperature >= 15)
+            //{
+            //    message = "It's warm outside!";
+            //}
+            //else
+            //{
+            //    message = "It's cold outside";
+            //}
+            //Console.WriteLine(message);
 
 
-            double x;
-            double y;
-            double result;
-
-            try
-            {
-
-            Console.WriteLine("Enter number 1: ");
-            x = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Enter number 2: ");
-            y= Convert.ToDouble(Console.ReadLine());
-
-            result = x / y;
-            Console.WriteLine("The result : " + result);
-
-            }
-            catch (FormatException e)
-            {
-                Console.WriteLine("Enter only numbers!");
-            }
-            catch (DivideByZeroException e)
-            {
-                Console.WriteLine("You cant divide with 0!");
-            }           
-            finally
-            {
-                Console.WriteLine("Thank you!");
-            }
-        Console.ReadKey();
+            message = (temperature >= 15) ? "It's warm outside!" : "It's cold outside";
+            Console.WriteLine((temperature >= 15) ? "It's warm outside!" : "It's cold outside");
+            Console.ReadKey();
         }
 
 
