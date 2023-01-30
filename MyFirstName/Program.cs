@@ -8,17 +8,41 @@ namespace RockPaperScissors
         static void Main(String[] args )
         {
 
-            // string interpolation = allows us to insert variables into a string literal.
-            //                        precede a string literal with $       
-            //                        {} are placeholders.
+            String[] ford = { "Mustang", "F-150", "Explorer" };
+            String[] chevy = { "Corvette", "Camaro", "Silverado" };
+            String[] toyota = { "Corolla", "Carmy", "Rav4" };
 
-            string firstName = "Gunay";
-            string lastName = "Akay";
-            int age = 25;
+            String[,] parkingLot =
+            {
 
-            Console.WriteLine("My name is " +  firstName +" "+ lastName + ". I'm " + age + " years old");
-            Console.WriteLine($"My name is {firstName} {lastName}. I'm {age} years old");
+            { "Mustang", "F-150", "Explorer" },
+             { "Corvette", "Camaro", "Silverado" },
+            { "Corolla", "Carmy", "Rav4" }
+            };
+
+
+            parkingLot[0, 2] = "Fusio";
+            parkingLot[2, 0] = "Tacoma";
+
+
+            foreach (String car in parkingLot)
+            {
+                Console.WriteLine(car);
+            }
+
+            for (int i = 0; i <parkingLot.GetLength(0) ; i++)
+            {
+                for (int j = 0; j < parkingLot.GetLength(1); j++)
+                {
+                    Console.WriteLine(parkingLot[i,j] + "");
+                }
+                Console.WriteLine();
+            }
+
+
             Console.ReadKey();
+
+
         }
 
 
