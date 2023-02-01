@@ -1,51 +1,25 @@
 ﻿using System;
 
 
-namespace RockPaperScissors
+namespace MyFirstProgram
 {
     class Program
     {
         static void Main(String[] args )
         {
+            // class = A bundle related code.
+            //         Can be used as a bluepoint to create objects. (OOP)
 
-            String[] ford = { "Mustang", "F-150", "Explorer" };
-            String[] chevy = { "Corvette", "Camaro", "Silverado" };
-            String[] toyota = { "Corolla", "Carmy", "Rav4" };
+            Math.Round(3.14);
+            Math.Abs(3.14);
+            Math.Pow(2, 3);
 
-            String[,] parkingLot =
-            {
-
-            { "Mustang", "F-150", "Explorer" },
-             { "Corvette", "Camaro", "Silverado" },
-            { "Corolla", "Carmy", "Rav4" }
-            };
-
-
-            parkingLot[0, 2] = "Fusio";
-            parkingLot[2, 0] = "Tacoma";
-
-
-            foreach (String car in parkingLot)
-            {
-                Console.WriteLine(car);
-            }
-
-            for (int i = 0; i <parkingLot.GetLength(0) ; i++)
-            {
-                for (int j = 0; j < parkingLot.GetLength(1); j++)
-                {
-                    Console.WriteLine(parkingLot[i,j] + "");
-                }
-                Console.WriteLine();
-            }
-
+            Messages.Bye();
 
             Console.ReadKey();
-
-
         }
 
-
     }
+   
 
 }
