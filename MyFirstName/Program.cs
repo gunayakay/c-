@@ -7,35 +7,37 @@ namespace MyFirstProgram
     {
         static void Main(String[] args )
         {
-            // object = An instance of a class.
-            //          A class can be used as a bluepoint to create objects. (OOP)
-            //          objects can have fields & methods (characteristics & actions)
+            // static = modifier to declare a static member, which belongs to the class itself 
+            //          rather than to any spesific object
 
-            Car car1 = new Car("Ford", "Mustang", 2022, "red");
-            Car car2 = new Car("Chevy", "Corvette", 2010, "blue");
-            car1.Drive();
-            car2.Drive();
+            Car car1 = new Car("Mustang");
+            Car car2 = new Car("Corvette");
+            Car car3 = new Car("Lamborghini");
+
+
+            Console.WriteLine(Car.numbersOfCars);
+
+            Car.StartRace();
         }
 
     }
+
     class Car
     {
-        String make;
         String model;
-        String color;
-        int year;
+        public static int numbersOfCars;
 
-        public Car(String make, String model, int year, String color)
+        public Car(String model)
         {
-            this.color = color;
-            this.make = make;
             this.model = model;
-            this.year = year;
+            numbersOfCars++;
         }
-        public void Drive()
+        public static void StartRace()
         {
-            Console.WriteLine($"You drive the {make} {model}");
+            Console.WriteLine("The race has begun!");
         }
+
     }
+   
 
 }
