@@ -7,37 +7,50 @@ namespace MyFirstProgram
     {
         static void Main(String[] args )
         {
-            // static = modifier to declare a static member, which belongs to the class itself 
-            //          rather than to any spesific object
+            // overloaded constructor = technique to create multiple constructor, 
+            //                          with a different set of paramater
+            //                          name + parameter = signature
 
-            Car car1 = new Car("Mustang");
-            Car car2 = new Car("Corvette");
-            Car car3 = new Car("Lamborghini");
+            Pizza pizza = new Pizza("stuffed crust", "red sauce", "mozarella", "pepperoni");
+            Pizza pizza2 = new Pizza("stuffed crust", "red sauce", "mozarella");
+            Pizza pizza3 = new Pizza("stuffed crust", "red sauce");
+            Pizza pizza4 = new Pizza("stuffed crust");
 
-
-            Console.WriteLine(Car.numbersOfCars);
-
-            Car.StartRace();
+            Console.ReadKey();
         }
 
     }
-
-    class Car
+    class Pizza
     {
-        String model;
-        public static int numbersOfCars;
 
-        public Car(String model)
-        {
-            this.model = model;
-            numbersOfCars++;
-        }
-        public static void StartRace()
-        {
-            Console.WriteLine("The race has begun!");
-        }
+        String bread;
+        String sauce;
+        String cheese;
+        String topping;
 
+        public Pizza(String bread)
+        {
+            this.bread = bread;
+            
+        }
+        public Pizza(String bread, String sauce)
+        {
+            this.bread = bread;
+            this.sauce = sauce;
+         
+        }
+        public Pizza(String bread, String sauce, String cheese)
+        {
+            this.bread = bread;
+            this.sauce = sauce;
+            this.cheese = cheese;
+        }
+        public Pizza(String bread, String sauce, String cheese,String topping)
+        {
+            this.bread = bread;
+            this.sauce = sauce;
+            this.cheese = cheese;
+            this.topping= topping;
+        }
     }
-   
-
 }
