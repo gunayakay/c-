@@ -7,22 +7,15 @@ namespace MyFirstProgram
     {
         static void Main(String[] args )
         {
-            // inheritance = one or more child classes recieving fields, methods, etc. from a common parent
+            // abstract classes = modifier that indicates missing components or incomplete implementation
 
-
-            Car car = new Car();
-            Bicycle bicycle = new Bicycle();
-            Boat boat = new Boat();
-
-            car.go();
-            Console.WriteLine(car.speed);
-            Console.WriteLine($"This car speed is {car.speed}. and have {car.wheels} wheels.");
+            // Veicle veicle = new Veicle(); its abstract class and we cannot create object
 
             Console.ReadKey();
         }
 
     }
-    class Veicle
+    abstract class Veicle
     {
 
         public int speed = 0;
@@ -34,13 +27,16 @@ namespace MyFirstProgram
     class Car : Veicle
     {
         public int wheels = 4;
+        int maxSpeed = 500;
     }
     class Bicycle : Veicle
     {
         public int wheels = 2;
+        int maxSpeed = 50;
     }
     class Boat : Veicle
     {
         public int wheels = 0;
+        int maxSpeed = 100;
     }
 }
