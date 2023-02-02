@@ -1,13 +1,21 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{F3DBAF9E-5359-4825-8B7C-8718C4C82E44}|Default">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyFirstName/Program.cs">
+    <Files>
+      <File FileName="MyFirstName/Program.cs" Line="16" Column="49" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MyFirstName" expanded="True">
-            <Node name="MyFirstName" expanded="True" />
+            <Node name="MyFirstName" expanded="True">
+              <Node name="Messages.cs" selected="True" />
+            </Node>
           </Node>
         </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
