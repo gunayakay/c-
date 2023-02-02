@@ -7,50 +7,40 @@ namespace MyFirstProgram
     {
         static void Main(String[] args )
         {
-            // overloaded constructor = technique to create multiple constructor, 
-            //                          with a different set of paramater
-            //                          name + parameter = signature
+            // inheritance = one or more child classes recieving fields, methods, etc. from a common parent
 
-            Pizza pizza = new Pizza("stuffed crust", "red sauce", "mozarella", "pepperoni");
-            Pizza pizza2 = new Pizza("stuffed crust", "red sauce", "mozarella");
-            Pizza pizza3 = new Pizza("stuffed crust", "red sauce");
-            Pizza pizza4 = new Pizza("stuffed crust");
+
+            Car car = new Car();
+            Bicycle bicycle = new Bicycle();
+            Boat boat = new Boat();
+
+            car.go();
+            Console.WriteLine(car.speed);
+            Console.WriteLine($"This car speed is {car.speed}. and have {car.wheels} wheels.");
 
             Console.ReadKey();
         }
 
     }
-    class Pizza
+    class Veicle
     {
 
-        String bread;
-        String sauce;
-        String cheese;
-        String topping;
-
-        public Pizza(String bread)
+        public int speed = 0;
+        public void go()
         {
-            this.bread = bread;
-            
+            Console.WriteLine("This veicle is moving!");
         }
-        public Pizza(String bread, String sauce)
-        {
-            this.bread = bread;
-            this.sauce = sauce;
-         
-        }
-        public Pizza(String bread, String sauce, String cheese)
-        {
-            this.bread = bread;
-            this.sauce = sauce;
-            this.cheese = cheese;
-        }
-        public Pizza(String bread, String sauce, String cheese,String topping)
-        {
-            this.bread = bread;
-            this.sauce = sauce;
-            this.cheese = cheese;
-            this.topping= topping;
-        }
+    }
+    class Car : Veicle
+    {
+        public int wheels = 4;
+    }
+    class Bicycle : Veicle
+    {
+        public int wheels = 2;
+    }
+    class Boat : Veicle
+    {
+        public int wheels = 0;
     }
 }
