@@ -11,33 +11,30 @@ namespace MyFirstProgram
             //          A class can be used as a bluepoint to create objects. (OOP)
             //          objects can have fields & methods (characteristics & actions)
 
-            Human human1 = new Human();
-            Human human2 = new Human();
-
-            human1.name = "Rick";
-            human1.age = 65;
-            
-            human2.name = "Morty";
-            human2.age = 16;
-
-            human1.Eat();
-            human1.Sleep();
-            Console.ReadKey();
+            Car car1 = new Car("Ford", "Mustang", 2022, "red");
+            Car car2 = new Car("Chevy", "Corvette", 2010, "blue");
+            car1.Drive();
+            car2.Drive();
         }
 
     }
-    class Human
+    class Car
     {
-       public String name;
-        public int age;
+        String make;
+        String model;
+        String color;
+        int year;
 
-        public void Eat()
+        public Car(String make, String model, int year, String color)
         {
-            Console.WriteLine($"{name} is eating.");
+            this.color = color;
+            this.make = make;
+            this.model = model;
+            this.year = year;
         }
-        public void Sleep()
+        public void Drive()
         {
-            Console.WriteLine($"{name} is sleeping.");
+            Console.WriteLine($"You drive the {make} {model}");
         }
     }
 
