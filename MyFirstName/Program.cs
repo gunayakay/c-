@@ -8,54 +8,59 @@ namespace MyFirstProgram
 
         static void Main(string[] args)
         {
-            // polymorphism = Greek word that means to "have many forms" 
-            //                Objects can be identified by more than one type
-            //                Ex. A dog is also: Canine, Animal, Organism
+            // interface = define a "contact" that all the classes inheriting from should follow
 
-            Car car = new Car();
+            //             An interface declares "what class should have"
+            //             An inheriting class defines "how it should do it"
 
-            Bicycle bicycle = new Bicycle();
+            //             benefit = security + multiple inheritance + "plug-and-play"
 
-            Boat boat = new Boat();
+            Rabbit rabbit = new Rabbit();
+            Hawk hawk = new Hawk();
+            Fish fish = new Fish();
+            fish.Hunt();
+            fish.Flee();
+            hawk.Hunt();
+            rabbit.Flee();
 
-            Vehicle[] vehicles = { car, bicycle,boat};
-
-
-            foreach (Vehicle vehicle in vehicles)
-            {
-                vehicle.Go();
-            }
             Console.ReadKey();
         }
     
     }
 
-    class Vehicle
+    interface IPrey
     {
-       public virtual void Go()
+        void Flee();
+    }
+    interface IPredator
+    {
+        void Hunt();
+    }
+    class Rabbit : IPrey
+    {
+        public void Flee()
         {
-            Console.WriteLine("The vehicle is moving!");
+            Console.WriteLine("The rabbit runs away!");
         }
     }
-    class Car: Vehicle
+    class Hawk : IPredator
     {
-     public override void Go()
+        public void Hunt()
         {
-            Console.WriteLine("The car is moving!");
-        }  
-    }
-    class Bicycle:Vehicle
-    {
-        public override void Go()
-        {
-            Console.WriteLine("The bicycle is moving!");
+            Console.WriteLine("Hawk is hunting!");
         }
     }
-    class Boat:Vehicle
+    class Fish :  IPrey,IPredator
     {
-        public override void Go()
+        public void Flee()
         {
-            Console.WriteLine("The boat is moving!");
+            Console.WriteLine("The fish swims away!");
+        }
+        public void Hunt()
+        {
+            Console.WriteLine("The fish searching for smaller fish!");
         }
     }
+
+    
 }
