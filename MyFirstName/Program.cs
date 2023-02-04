@@ -8,37 +8,49 @@ namespace MyFirstProgram
 
         static void Main(string[] args)
         {
+            // getters & setters = add security to fields by encapsulation 
+            //                     They're accessors found with properties 
 
-            List<Player> players = new List<Player>();
+            // properties = combine aspects of both fields and methods (share name with a field)
+            // get accessor = used to return the property value 
+            // get accessor = used to assign a new value 
+            // value keyword = defines the value being assigned by the set (parameter)
 
+            Car car = new Car(400);
 
-            players.Add(new Player("Chad"));
-            players.Add(new Player("Steve"));
-            players.Add(new Player("Karen"));
+            car.speed = 1000000;
 
-            foreach (Player item in players)
-            {
-                Console.WriteLine(item.username);
-            }
+            Console.WriteLine(car.Speed);
+
             Console.ReadKey();
+        }
+
+        class Car
+        {
+            public int speed;
+
+            public Car(int speed)
+            {
+                Speed = speed;
+            }
+
+            public int Speed
+            {
+                get { return speed; } // read
+                set                   // writable
+                {
+                    if (speed > 500)
+                    {
+                        speed = 500;
+                    }
+                    else
+                    {
+                    speed = value;
+                    }
+                }
+            }
         }
     
     }
-
-    class Player
-    {
-        public String username;
-
-        public Player(String username)
-        {
-            this.username = username;
-        }
-        public override string ToString()
-        {
-            return username;
-        }
-    }
-
-
     
 }
