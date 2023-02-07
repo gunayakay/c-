@@ -8,55 +8,43 @@ namespace MyFirstProgram
 
         static void Main(string[] args)
         {
-            // generic ="not specific to a particular data type"
-            //          add <T> to: classes, methods, fields, etc.
-            //          allows for code reusability for different data type 
+            // thread = an execution path of a program
+            //          we can use multiple thread to perform 
+            //          different tasks of our program at the same time.
+            //          Current thread running is "main" thread
+            //          using.System.Threading;
+
+            Thread mainThread = Thread.CurrentThread;
+            mainThread.Name = "Main thread";
+            // Console.WriteLine(mainThread.Name);
 
 
-            int[] intArray = { 1, 2, 3 };
-            double[] doubleArray = {1.0, 2.0, 3.0 };
-            String[] stringArray = {"1", "2", "3" };
+            Thread thread1 =new Thread(() => CountDown("Timer #1"));
+            Thread thread2 =new Thread(() => CountUp("Timer #2"));
+            thread1.Start();
+            thread2.Start();
 
-            displayElements(intArray);
-            displayElements(doubleArray);
-            displayElements(stringArray);
-            
-            Console.ReadKey();
-
+            Console.WriteLine(mainThread.Name + "is complete");
+        
         }
 
-        //public static void displayElements(int[] array)
-        //{
-        //    foreach(int item in array)
-        //    {
-        //        Console.Write(item + " ");
-        //    }
-        //    Console.WriteLine();
-        //}
-        //public static void displayElements(double[] array)
-        //{
-        //    foreach(double item in array)
-        //    {
-        //        Console.Write(item + " ");
-        //    }
-        //    Console.WriteLine();
-        //}
-        //public static void displayElements(String[] array)
-        //{
-        //    foreach(String item in array)
-        //    {
-        //        Console.Write(item + " ");
-        //    }
-        //}
-
-        public static void displayElements<Thing>(Thing[] array)
+        public static void CountDown(String name)
         {
-            foreach (Thing item in array)
+            for (int i = 10; i >= 0; i--)
             {
-                Console.Write(item + " ");
+                Console.WriteLine("Timer #1 " + i + "seconds.");
+                Thread.Sleep(1000);
             }
-
-            Console.WriteLine();
+            Console.WriteLine("Timer #1 is complete!");
+        }
+        public static void CountUp(String name)
+        {
+            for (int i = 0; i <= 10; i++)
+            {
+                Console.WriteLine("Timer #2 " + i + "seconds.");
+                Thread.Sleep(1000);
+            }
+            Console.WriteLine("Timer #2 is complete!");
         }
     }
     
