@@ -8,55 +8,57 @@ namespace MyFirstProgram
 
         static void Main(string[] args)
         {
-            // enums = special "class" that contains a set of named integer constants. 
-            //         Use enums when you have values that you know will not change,                                  
-            //         To get the integer value from an item, you must explicitly convert to an int
+            // generic ="not specific to a particular data type"
+            //          add <T> to: classes, methods, fields, etc.
+            //          allows for code reusability for different data type 
 
-            // name = integer
 
-            // Console.WriteLine(Planets.Saturn + "is planet #" + (int)Planets.Saturn.);
+            int[] intArray = { 1, 2, 3 };
+            double[] doubleArray = {1.0, 2.0, 3.0 };
+            String[] stringArray = {"1", "2", "3" };
 
-            String name = PlanetRadius.Earth.ToString();
-            int radius = (int)PlanetRadius.Earth;
-            double volume = Volume(PlanetRadius.Earth);
-
-            Console.WriteLine("planet: " + name);
-            Console.WriteLine("radius: " + radius);
-            Console.WriteLine("volume: " + volume);
-
+            displayElements(intArray);
+            displayElements(doubleArray);
+            displayElements(stringArray);
+            
             Console.ReadKey();
-        }
-        public static double Volume(PlanetRadius radius)
-        {
-            double volume = (4.0 / 3.0) * Math.PI * Math.Pow((int)radius, 3);
-            return volume;
+
         }
 
+        //public static void displayElements(int[] array)
+        //{
+        //    foreach(int item in array)
+        //    {
+        //        Console.Write(item + " ");
+        //    }
+        //    Console.WriteLine();
+        //}
+        //public static void displayElements(double[] array)
+        //{
+        //    foreach(double item in array)
+        //    {
+        //        Console.Write(item + " ");
+        //    }
+        //    Console.WriteLine();
+        //}
+        //public static void displayElements(String[] array)
+        //{
+        //    foreach(String item in array)
+        //    {
+        //        Console.Write(item + " ");
+        //    }
+        //}
+
+        public static void displayElements<Thing>(Thing[] array)
+        {
+            foreach (Thing item in array)
+            {
+                Console.Write(item + " ");
+            }
+
+            Console.WriteLine();
+        }
+    }
     
-    }
-    enum Planets
-    {
-        Mercury=1,
-        Venus=2,
-        Earth=3,
-        Mars=4,
-        Jupiter=5,
-        Saturn=6,
-        Uranus=7,
-        Neptune=8,
-        Pluto=9
-    }
-    enum PlanetRadius
-    {
-        Mercury=2449,
-        Venus=6241,
-        Earth=6302,
-        Mars=4214,
-        Jupiter=52515,
-        Saturn=612511,
-        Uranus=712412,
-        Neptune=41242,
-        Pluto=9123
-    }
     
 }
